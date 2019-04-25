@@ -18,16 +18,24 @@ public class Animal implements Comparable<Animal>{
     private double peso;
     
 
+    
     public Animal() {
        
     }
 
     public Animal(int codigo, String nombre, int edad, double peso) {
+        this.codigo = codigo;
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
-
     }
+
+    public Animal(String nombre, int edad, double peso) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.peso = peso;
+    }
+    
 public int getCodigo() {
         return codigo;
     }

@@ -51,28 +51,24 @@ public final class Perro extends Domestico implements Acciones {
     }
 ///////////contructor\\\\\\\\\\\\\
 
-    public Perro(String raza, String pelaje, String color, String caracter) {
+    public Perro(String raza, String pelaje, String color, String caracter, String tamaño, int numExtremindades, String sexo, String alimento, int codigo, String nombre, int edad, double peso) {
+        super(tamaño, numExtremindades, sexo, alimento, codigo, nombre, edad, peso);
         this.raza = raza;
         this.pelaje = pelaje;
         this.color = color;
         this.caracter = caracter;
     }
 
-    public Perro(String raza, String pelaje, String color, String caracter, int codigo, String nombre, int edad, double peso) {
-        super(codigo, nombre, edad, peso);
+    public Perro(String raza, String pelaje, String color, String caracter, String tamaño, int numExtremindades, String sexo, String alimento, String nombre, int edad, double peso) {
+        super(tamaño, numExtremindades, sexo, alimento, nombre, edad, peso);
         this.raza = raza;
         this.pelaje = pelaje;
         this.color = color;
         this.caracter = caracter;
     }
 
-    public Perro(String raza, String pelaje, String color, String caracter, String tamaño, int numExtremindades, double sexo, String alimento) {
-        super(tamaño, numExtremindades, sexo, alimento);
-        this.raza = raza;
-        this.pelaje = pelaje;
-        this.color = color;
-        this.caracter = caracter;
-    }
+
+
 
 ////////// metodos\\\\\\\\\\\    
   public boolean ladrar(){

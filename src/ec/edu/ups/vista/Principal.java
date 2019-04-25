@@ -28,7 +28,7 @@ public class Principal {
         int opcionMenuPez=0;
         int opcionMenuSerpiente=0;
         int opcionMenuMono=0;
-        controladorPerro op=new controladorPerro();
+        controladorPerro cp=new controladorPerro();
         Perro p= new Perro();
         do{
                     
@@ -43,7 +43,7 @@ public class Principal {
             
             switch(opcionMenuPrincipal){
                 case 1: 
-                    //opcion para el crud aire acondicionado
+                    //opcion para el crud 
                     do{
                         System.out.println("MENU PERRO");
                         System.out.println("1. Create");
@@ -60,17 +60,30 @@ public class Principal {
                                 //pide todos los datos por teclado
                                 //instancia un objeto
                                 //llama al metodo create del controlador
-                               System.out.println("ingrese el codigo");
-                               int codigo=teclado.nextInt();
-                                System.out.println("ingrese el nombre del Perro");
+                                 System.out.println("ingrese el nombre del Perro");
                                 String nombre=teclado.nextLine();
                                 System.out.println("ingrese la edad");
                                 int edad = teclado.nextInt();                       
-                                System.out.println("ingrese peso");
-                                double peso =teclado.nextDouble();
+                                System.out.println("ingrese el peso");
+                                double peso = teclado.nextDouble();
+                                System.out.println("ingrese el tamaño");
+                                String tamaño =teclado.nextLine();
+                                System.out.println("ingrese el numero de extremidades");
+                                int extremidades = teclado.nextInt();
                                 System.out.println("ingrese el sexo");
-                                String sexo = teclado.nextLine();
-                                op.create(p);
+                              String sexo = teclado.nextLine();
+                                System.out.println("ingrese el alimento");
+                                String alimento =teclado.nextLine();
+                                System.out.println("ingrese ls raza");
+                                String raza = teclado.nextLine();
+                                System.out.println("ingrese el pelaje");
+                                String pelaje = teclado.nextLine();
+                                System.out.println("ingrese el color");
+                                String color = teclado.nextLine();
+                                System.out.println("ingrese el caracter");
+                                String caracter = teclado.nextLine();
+                                Perro perro = new Perro(raza, pelaje, color, caracter, tamaño, extremidades, sexo, alimento, nombre, edad, peso);
+                                cp.create(perro);
                                 
                                    break;
                              
@@ -79,10 +92,9 @@ public class Principal {
                                 //pide el codigo por teclado
                                 //llama al metodo read del controlador
                                 //visualizo los datos del objeto
-                                System.out.println("Ingrese el codigo a leer");
-                                 int c = teclado.nextInt();
-                                 op.read(c);
-                                System.out.println(op.read(c));
+                               System.out.println("Ingrese el codigo del objeto a leer");
+                                cp.codigo();
+                                System.out.println(cp.read(teclado.nextInt()));
                                 break;
                             case 3:
                                 //update

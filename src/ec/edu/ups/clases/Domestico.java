@@ -16,7 +16,7 @@ public abstract class Domestico extends Animal implements Acciones {
 
     private String tamaño;
     private int numExtremindades;
-    private double sexo;
+    private String sexo;
     private String alimento;
 
     public Domestico() {
@@ -32,7 +32,7 @@ public abstract class Domestico extends Animal implements Acciones {
         return numExtremindades;
     }
 
-    public double getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
@@ -48,23 +48,34 @@ public abstract class Domestico extends Animal implements Acciones {
         this.numExtremindades = numExtremindades;
     }
 
-    public void setSexo(double sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
     public void setAlimento(String alimento) {
         this.alimento = alimento;
     }
+    
     public Domestico(int codigo, String nombre, int edad, double peso) {
         super(codigo, nombre, edad, peso);
     }
 
-    public Domestico(String tamaño, int numExtremindades, double sexo, String alimento) {
+    public Domestico(String tamaño, int numExtremindades, String sexo, String alimento, int codigo, String nombre, int edad, double peso) {
+        super(codigo, nombre, edad, peso);
         this.tamaño = tamaño;
         this.numExtremindades = numExtremindades;
         this.sexo = sexo;
         this.alimento = alimento;
     }
+
+    public Domestico(String tamaño, int numExtremindades, String sexo, String alimento, String nombre, int edad, double peso) {
+        super(nombre, edad, peso);
+        this.tamaño = tamaño;
+        this.numExtremindades = numExtremindades;
+        this.sexo = sexo;
+        this.alimento = alimento;
+    }
+    
 
     public boolean jugar(){
         return true;

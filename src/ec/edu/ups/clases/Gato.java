@@ -52,28 +52,28 @@ public final class Gato extends Domestico implements Acciones {
     }
     ///////////contructor\\\\\\\\\\\\\\\\\\\\\\\
 
-    public Gato(String tipo, int añosvida, String color, double meedidas) {
+    public Gato() {
+    }
+
+    public Gato(String tipo, int añosvida, String color, double meedidas, String tamaño, int numExtremindades, String sexo, String alimento, int codigo, String nombre, int edad, double peso) {
+        super(tamaño, numExtremindades, sexo, alimento, codigo, nombre, edad, peso);
         this.tipo = tipo;
         this.añosvida = añosvida;
         this.color = color;
         this.meedidas = meedidas;
     }
 
-    public Gato(String tipo, int añosvida, String color, double meedidas, int codigo, String nombre, int edad, double peso) {
-        super(codigo, nombre, edad, peso);
+    public Gato(String tipo, int añosvida, String color, double meedidas, String tamaño, int numExtremindades, String sexo, String alimento, String nombre, int edad, double peso) {
+        super(tamaño, numExtremindades, sexo, alimento, nombre, edad, peso);
         this.tipo = tipo;
         this.añosvida = añosvida;
         this.color = color;
         this.meedidas = meedidas;
     }
 
-    public Gato(String tipo, int añosvida, String color, double meedidas, String tamaño, int numExtremindades, double sexo, String alimento) {
-        super(tamaño, numExtremindades, sexo, alimento);
-        this.tipo = tipo;
-        this.añosvida = añosvida;
-        this.color = color;
-        this.meedidas = meedidas;
-    }
+ 
+
+    
     //////////metodos\\\\\\\\\\\\\\\\\
     public boolean cazar(){
        return true ;
