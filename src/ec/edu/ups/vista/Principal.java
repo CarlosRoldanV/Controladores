@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Byron PC
+ * @author Carlos
  */
 public class Principal {
 

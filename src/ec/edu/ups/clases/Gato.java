@@ -11,7 +11,7 @@ import ec.edu.ups.interfaces.Acciones;
  *
  * @author Byron PC
  */
-public class Pez extends Domestico implements Acciones {
+public class Gato extends Domestico implements Acciones {
  private String tipo;
     private int tamaño;
     private String color;
@@ -40,7 +40,7 @@ public class Pez extends Domestico implements Acciones {
         return color;
     }
     
-   public Pez() {
+   public Gato() {
     }
 
     @Override
@@ -69,7 +69,7 @@ public class Pez extends Domestico implements Acciones {
     }
 
     
-    public Pez(int codigo, String nombre, int edad, double peso, String sexo) {
+    public Gato(int codigo, String nombre, int edad, double peso, String sexo) {
         super(codigo, nombre, edad, peso, sexo);
     }
 

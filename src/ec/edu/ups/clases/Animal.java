@@ -9,7 +9,7 @@ package ec.edu.ups.clases;
 
 /**
  *
- * @author Byron PC
+ * @author Carlos
  */
 //Estoy trayendo la interface
 public class Animal implements Comparable<Animal>{
@@ -17,17 +17,17 @@ public class Animal implements Comparable<Animal>{
     private String nombre;
     private int edad;
     private double peso;
-    private String sexo;
+    
 
     public Animal() {
        
     }
 
-    public Animal(int codigo, String nombre, int edad, double peso, String sexo) {
+    public Animal(int codigo, String nombre, int edad, double peso) {
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
-        this.sexo = sexo;
+
     }
 public int getCodigo() {
         return codigo;
@@ -58,17 +58,17 @@ public void setCodigo(int codigo) {
         this.peso = peso;
     }
 
-    public String getSexo() {
-        return sexo;
-    }
+    
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public boolean comer(){
+     return  true;
     }
-
-    @Override
+     public boolean dormir(){
+     return  true;
+    }
+     @Override
     public String toString() {
-        return "Animal{" + "codigo=" + codigo + ", nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", sexo=" + sexo + '}';
+        return "Animal{" + "codigo=" + codigo + ", nombre=" + nombre + ", edad=" + edad + ", peso=" + peso +'}';
     }
 
     @Override

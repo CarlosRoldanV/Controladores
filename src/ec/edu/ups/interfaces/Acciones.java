@@ -7,22 +7,12 @@ package ec.edu.ups.interfaces;
 
 /**
  *
- * @author Byron PC
+ * @author Carlos
  */
 public interface Acciones {
-    //Declarar constantes con mayuscula.
 
-    //Punto y coma no llaves
+    public abstract boolean nacer();
 
-    public abstract void comer();
-    
-    public abstract void dormir();
-
-    public abstract void moverse();
-
-    public abstract void jugar();
-
-    public abstract void reproducirse();
-
+    public abstract boolean morir();
   
 }

@@ -6,7 +6,7 @@
 package ec.edu.ups.controladores;
 
 import ec.edu.ups.clases.Perro;
-import ec.edu.ups.clases.Pez;
+import ec.edu.ups.clases.Gato;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -15,27 +15,27 @@ import java.util.TreeSet;
  * @author Estudiante
  */
 public class controladorPez {
-    private SortedSet<Pez>lista;
+    private SortedSet<Gato>lista;
     private int codigo;
     public controladorPez(){
         lista=new TreeSet<>();
         codigo=1;
         
     }
-    public void create (Pez objeto){
+    public void create (Gato objeto){
        codigo++;
         lista.add(objeto);
     }
-    public Pez read (int codigo){
-        for (Pez Pez:lista){
+    public Gato read (int codigo){
+        for (Gato Pez:lista){
             if(Pez.getCodigo()==codigo){
                 return Pez;
             }
         }
         return null;
     }
-    public void update (Pez objeto) {
-        for (Pez pez: lista){
+    public void update (Gato objeto) {
+        for (Gato pez: lista){
         
         if (pez.equals(objeto)){
             lista.remove(pez);
@@ -44,8 +44,8 @@ public class controladorPez {
         }          
         }
     }
-    public void delate(Pez objeto){
-        for (Pez pez: lista){
+    public void delate(Gato objeto){
+        for (Gato pez: lista){
         if (pez.getCodigo() == codigo){
             lista.remove(pez);
             break;

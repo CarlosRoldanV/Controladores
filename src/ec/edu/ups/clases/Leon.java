@@ -5,10 +5,13 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.interfaces.Acciones;
+
 /**
  *
  * @author Estudiante
  */
-public class Serpiente {
+public final class Leon extends Salvaje implements Acciones{
+    private double velocidad;
     
 }
