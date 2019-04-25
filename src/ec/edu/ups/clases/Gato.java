@@ -11,66 +11,86 @@ import ec.edu.ups.interfaces.Acciones;
  *
  * @author Byron PC
  */
-public class Gato extends Domestico implements Acciones {
+public final class Gato extends Domestico implements Acciones {
  private String tipo;
-    private int tamaño;
+    private int añosvida;
     private String color;
+    private double meedidas;
+///////////getters\\\\\\\\\
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public int getAñosvida() {
+        return añosvida;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getMeedidas() {
+        return meedidas;
+    }
+    ///////////setters\\\\\\\\\\\\
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    public void setTamaño(int tamaño) {
-        this.tamaño = tamaño;
+    public void setAñosvida(int añosvida) {
+        this.añosvida = añosvida;
     }
 
     public void setColor(String color) {
         this.color = color;
     }
 
-    public String getTipo() {
-        return tipo;
+    public void setMeedidas(double meedidas) {
+        this.meedidas = meedidas;
+    }
+    ///////////contructor\\\\\\\\\\\\\\\\\\\\\\\
+
+    public Gato(String tipo, int añosvida, String color, double meedidas) {
+        this.tipo = tipo;
+        this.añosvida = añosvida;
+        this.color = color;
+        this.meedidas = meedidas;
     }
 
-    public int getTamaño() {
-        return tamaño;
+    public Gato(String tipo, int añosvida, String color, double meedidas, int codigo, String nombre, int edad, double peso) {
+        super(codigo, nombre, edad, peso);
+        this.tipo = tipo;
+        this.añosvida = añosvida;
+        this.color = color;
+        this.meedidas = meedidas;
     }
 
-    public String getColor() {
-        return color;
+    public Gato(String tipo, int añosvida, String color, double meedidas, String tamaño, int numExtremindades, double sexo, String alimento) {
+        super(tamaño, numExtremindades, sexo, alimento);
+        this.tipo = tipo;
+        this.añosvida = añosvida;
+        this.color = color;
+        this.meedidas = meedidas;
+    }
+    //////////metodos\\\\\\\\\\\\\\\\\
+    public boolean cazar(){
+       return true ;
+    }
+    @Override
+    public boolean nacer() {
+        return true;
+    }
+     @Override
+    public boolean morir() {
+        return true;
+    }
+    //////////////////toString\\\\\\\\\\\\\\\\
+
+    @Override
+    public String toString() {
+        return "Gato{" + "tipo=" + tipo + ", a\u00f1osvida=" + añosvida + ", color=" + color + ", meedidas=" + meedidas + '}';
     }
     
-   public Gato() {
-    }
-
-    @Override
-    public void comer() {
-
-    }
-
-    @Override
-    public void dormir() {
-
-    }
-
-    @Override
-    public void moverse() {
-
-    }
-
-    @Override
-    public void jugar() {
-
-    }
-
-    @Override
-    public void reproducirse() {
-
-    }
-
-    
-    public Gato(int codigo, String nombre, int edad, double peso, String sexo) {
-        super(codigo, nombre, edad, peso, sexo);
-    }
-
 }

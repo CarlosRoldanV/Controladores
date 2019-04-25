@@ -9,15 +9,17 @@ import ec.edu.ups.interfaces.Acciones;
 
 /**
  *
- * @author Byron PC
+ * @author Carlos
  */
-public class Perro extends Domestico implements Acciones {
+public final class Perro extends Domestico implements Acciones {
     private String raza;
     private String pelaje;
     private String color;
+    private String caracter;
     public Perro(){
     
     }
+    //////////getters\\\\\\\\\\\\
     public String getRaza() {
         return raza;
     }
@@ -27,6 +29,11 @@ public class Perro extends Domestico implements Acciones {
     public String getColor() {
         return color;
     }
+    public String getCaracter() {
+        return caracter;
+    }
+    ///////setters\\\\\\\
+    
     public void setRaza(String raza) {
         this.raza = raza;
     }
@@ -39,51 +46,53 @@ public class Perro extends Domestico implements Acciones {
         this.color = color;
     }
 
-    public Perro(int codigo, String nombre, int edad, double peso, String sexo) {
-        super(codigo, nombre, edad, peso, sexo);
+    public void setCaracter(String caracter) {
+        this.caracter = caracter;
     }
-   
-    public Perro(String raza, String pelaje, String color, int codigo, String nombre, int edad, double peso, String sexo) {
-        super(codigo, nombre, edad, peso, sexo);
+///////////contructor\\\\\\\\\\\\\
+
+    public Perro(String raza, String pelaje, String color, String caracter) {
         this.raza = raza;
         this.pelaje = pelaje;
         this.color = color;
+        this.caracter = caracter;
     }
 
-    public Perro(String raza, String pelaje, String color) {
+    public Perro(String raza, String pelaje, String color, String caracter, int codigo, String nombre, int edad, double peso) {
+        super(codigo, nombre, edad, peso);
         this.raza = raza;
         this.pelaje = pelaje;
         this.color = color;
+        this.caracter = caracter;
+    }
+
+    public Perro(String raza, String pelaje, String color, String caracter, String tamaño, int numExtremindades, double sexo, String alimento) {
+        super(tamaño, numExtremindades, sexo, alimento);
+        this.raza = raza;
+        this.pelaje = pelaje;
+        this.color = color;
+        this.caracter = caracter;
+    }
+
+////////// metodos\\\\\\\\\\\    
+  public boolean ladrar(){
+      return true;
+  }
+    @Override
+    public boolean nacer() {
+        return true;
+    }
+     @Override
+    public boolean morir() {
+        return true;
+    }
+    ////////////tosttring\\\\\\\\\
+
+    @Override
+    public String toString() {
+        return "Perro{" + "raza=" + raza + ", pelaje=" + pelaje + ", color=" + color + ", caracter=" + caracter + '}';
     }
     
-    
 
-    @Override //Sobbreescritura de metodos Polimorfismo
-    public void comer() {
-        System.out.println("Clase Perro: ");
-        System.out.println("\t El perro "+this.getNombre()+" tiene codigo " + this.getCodigo());
-        System.out.println("\t " + this.getNombre() + " està comiendo"); //Hereda de animal e implementa acciones
-
-    }
-
-    @Override
-    public void dormir() {
-        System.out.println("\t " + this.getNombre() +" tiene " + this.getEdad() + " año");
-    }
-
-    @Override
-    public void moverse() {
-        System.out.println("\t " + this.getNombre() +" pesa " + this.getPeso() + " kilos");
-    }
-
-    @Override
-    public void jugar() {
-        System.out.println("\t " + this.getNombre() +" juega mucho porque tiene " + this.getEdad() + " año");
-    }
-
-    @Override
-    public void reproducirse() {
-        System.out.println("\t " + this.getNombre() +" se reproduce diferente porque es " + this.getSexo());
-    }
 
 }
