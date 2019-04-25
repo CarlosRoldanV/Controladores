@@ -9,7 +9,7 @@ import ec.edu.ups.interfaces.Acciones;
 
 /**
  *
- * @author Byron PC
+ * @author Carlos
  */
 public final class Gato extends Domestico implements Acciones {
  private String tipo;

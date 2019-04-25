@@ -18,6 +18,10 @@ public final class Leon extends Salvaje implements Acciones{
     private int numhijos;
     /////////////getters\\\\\\\\\\\\
 
+    public Leon() {
+     
+    }
+
     public double getVelocidad() {
         return velocidad;
     }

@@ -11,7 +11,6 @@ package ec.edu.ups.clases;
  *
  * @author Carlos
  */
-//Estoy trayendo la interface
 public class Animal implements Comparable<Animal>{
     private int codigo;
     private String nombre;

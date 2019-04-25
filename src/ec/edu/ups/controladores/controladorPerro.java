@@ -14,20 +14,18 @@ import java.util.List;
  * @author Estudiante
  */
 public class controladorPerro {
-
-    public controladorPerro(List<Perro> lista, int codigo) {
-        this.lista = lista;
-        this.codigo = codigo;
+ 
+   private List<Perro> lista;
+    private int codigo;
+    // Constructor
+    public controladorPerro() {
+        codigo = 0;
+        lista = new ArrayList<>();
     }
     
-    public List<Perro> lista;
-    private int codigo;
-
-    public controladorPerro() {
-      lista = new ArrayList<>();
-      
-    }
-    public void create (Perro objeto){
+    public void create(Perro objeto) {
+        codigo++;
+        objeto.setCodigo(codigo);
         lista.add(objeto);
     }
     public Perro read (int codigo){
@@ -38,15 +36,15 @@ public class controladorPerro {
         }
         return null;
     }
-    public void update (Perro objeto) {
-        for (int i=0; i<lista.size();i++){
-            Perro elemento= lista.get(i);
-        if (elemento.equals(objeto)){
-            lista.set(i, objeto);
-            break;
-        }          
+   public void update(Perro objeto) {
+        for (int i = 0; i < lista.size(); i++) {
+            Perro elemento = lista.get(i);
+            if (elemento.getCodigo() == objeto.getCodigo()) {
+                lista.set(i, objeto);
+            }
         }
     }
+   
     public void delate(Perro objeto){
         for (int i=0; i<lista.size();i++){
             Perro elemento= lista.get(i);
@@ -56,6 +54,16 @@ public class controladorPerro {
         }
         }
     }
-    
+    public void lista (){
+        for (Perro perro : lista) {
+            System.out.println(perro);
+        }
 }
-
+    public void codigo(){
+        
+       for (Perro perro : lista) {
+            System.out.println(perro.getCodigo()+". "+perro.getNombre());
+        } 
+       
+    }
+    }

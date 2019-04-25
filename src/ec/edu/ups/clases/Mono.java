@@ -9,7 +9,7 @@ import ec.edu.ups.interfaces.Acciones;
 
 /**
  *
- * @author Estudiante
+ * @author Carlos
  */
 public final class Mono extends Salvaje implements Acciones{
   private String habilidad;
