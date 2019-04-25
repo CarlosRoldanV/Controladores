@@ -40,12 +40,12 @@ public class ControladorLeon {
 
     }
     // Eliminacion del objeto tipo NoVascular
-    public void delet(int codigo) {
+    public void delete(int codigo) {
         lista.remove(codigo);
 
     }
     // Listar los objetos tipo NoVascular
-    public void listar() {
+    public void lista() {
         System.out.println(lista.values());
     }
     

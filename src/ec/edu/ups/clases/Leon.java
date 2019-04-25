@@ -9,7 +9,7 @@ import ec.edu.ups.interfaces.Acciones;
 
 /**
  *
- * @author Estudiante
+ * @author Carlos
  */
 public final class Leon extends Salvaje implements Acciones{
     private double velocidad;
@@ -56,28 +56,23 @@ public final class Leon extends Salvaje implements Acciones{
     }
     /////contructor\\\\\\\
 
-    public Leon(double velocidad, int numDientes, int medida, int numhijos) {
+    public Leon(double velocidad, int numDientes, int medida, int numhijos, String clima, String ubicacion, int fuerza, double precio, int codigo, String nombre, int edad, double peso) {
+        super(clima, ubicacion, fuerza, precio, codigo, nombre, edad, peso);
         this.velocidad = velocidad;
         this.numDientes = numDientes;
         this.medida = medida;
         this.numhijos = numhijos;
     }
 
-    public Leon(double velocidad, int numDientes, int medida, int numhijos, int codigo, String nombre, int edad, double peso) {
-        super(codigo, nombre, edad, peso);
+    public Leon(double velocidad, int numDientes, int medida, int numhijos, String clima, String ubicacion, int fuerza, double precio, String nombre, int edad, double peso) {
+        super(clima, ubicacion, fuerza, precio, nombre, edad, peso);
         this.velocidad = velocidad;
         this.numDientes = numDientes;
         this.medida = medida;
         this.numhijos = numhijos;
     }
 
-    public Leon(double velocidad, int numDientes, int medida, int numhijos, String clima, String ubicacion, int fuerza, double precio) {
-        super(clima, ubicacion, fuerza, precio);
-        this.velocidad = velocidad;
-        this.numDientes = numDientes;
-        this.medida = medida;
-        this.numhijos = numhijos;
-    }
+    
     /////////metodos\\\\\\\\\\
     public boolean correr(){
         return true;

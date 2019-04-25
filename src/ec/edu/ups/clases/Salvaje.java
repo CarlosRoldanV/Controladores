@@ -60,12 +60,22 @@ public abstract class Salvaje extends Animal implements Acciones{
         super(codigo, nombre, edad, peso);
     }
 
-    public Salvaje(String clima, String ubicacion, int fuerza, double precio) {
+    public Salvaje(String clima, String ubicacion, int fuerza, double precio, int codigo, String nombre, int edad, double peso) {
+        super(codigo, nombre, edad, peso);
         this.clima = clima;
         this.ubicacion = ubicacion;
         this.fuerza = fuerza;
         this.precio = precio;
     }
+
+    public Salvaje(String clima, String ubicacion, int fuerza, double precio, String nombre, int edad, double peso) {
+        super(nombre, edad, peso);
+        this.clima = clima;
+        this.ubicacion = ubicacion;
+        this.fuerza = fuerza;
+        this.precio = precio;
+    }
+    
     ////////metodos\\\\\\\\\\\\\
  public boolean correr(){
      return true;

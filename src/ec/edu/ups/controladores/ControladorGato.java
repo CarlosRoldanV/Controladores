@@ -46,7 +46,7 @@ public class ControladorGato {
         }
     }
     
-   public void delet(int codigo) {
+   public void delete(int codigo) {
         for (Gato gato : lista) {
            
             if(gato.getCodigo()== codigo){
@@ -65,5 +65,10 @@ public class ControladorGato {
        for (Gato gato : lista) {
             System.out.println(gato.getCodigo()+". "+gato.getNombre());
         } 
+    }
+    public void lista (){
+        for (Gato gato : lista) {
+            System.out.println(gato);
+        }
     }
 }

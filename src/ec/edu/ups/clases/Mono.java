@@ -13,7 +13,7 @@ import ec.edu.ups.interfaces.Acciones;
  */
 public final class Mono extends Salvaje implements Acciones{
   private String habilidad;
-private String altura;
+private int altura;
 private String habitat;
 private String actitud;
 
@@ -23,7 +23,7 @@ private String actitud;
         return habilidad;
     }
 
-    public String getAltura() {
+    public int getAltura() {
         return altura;
     }
 
@@ -40,7 +40,7 @@ private String actitud;
         this.habilidad = habilidad;
     }
 
-    public void setAltura(String altura) {
+    public void setAltura(int altura) {
         this.altura = altura;
     }
 
@@ -56,29 +56,24 @@ private String actitud;
     public Mono() {
     }
 
-    public Mono(String habilidad, String altura, String habitat, String actitud) {
+    public Mono(String habilidad, int altura, String habitat, String actitud, String clima, String ubicacion, int fuerza, double precio, int codigo, String nombre, int edad, double peso) {
+        super(clima, ubicacion, fuerza, precio, codigo, nombre, edad, peso);
         this.habilidad = habilidad;
         this.altura = altura;
         this.habitat = habitat;
         this.actitud = actitud;
     }
 
-    public Mono(String habilidad, String altura, String habitat, String actitud, int codigo, String nombre, int edad, double peso) {
-        super(codigo, nombre, edad, peso);
+    public Mono(String habilidad, int altura, String habitat, String actitud, String clima, String ubicacion, int fuerza, double precio, String nombre, int edad, double peso) {
+        super(clima, ubicacion, fuerza, precio, nombre, edad, peso);
         this.habilidad = habilidad;
         this.altura = altura;
         this.habitat = habitat;
         this.actitud = actitud;
     }
+    
 
-    public Mono(String habilidad, String altura, String habitat, String actitud, String clima, String ubicacion, int fuerza, double precio) {
-        super(clima, ubicacion, fuerza, precio);
-        this.habilidad = habilidad;
-        this.altura = altura;
-        this.habitat = habitat;
-        this.actitud = actitud;
-    }
-        //////////////////metodos\\\\\\\\\\\\\\\\
+           //////////////////metodos\\\\\\\\\\\\\\\\
     public boolean saltar(){
         return true;
     }   
