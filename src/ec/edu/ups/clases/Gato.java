@@ -90,7 +90,7 @@ public final class Gato extends Domestico implements Acciones {
 
     @Override
     public String toString() {
-        return "Gato{" + "tipo=" + tipo + ", a\u00f1osvida=" + añosvida + ", color=" + color + ", meedidas=" + meedidas + '}';
+        return super.toString()+"\nGato\n{" + "tipo=" + tipo + ", a\u00f1osvida=" + añosvida + ", color=" + color + ", meedidas=" + meedidas + '}';
     }
     
 }

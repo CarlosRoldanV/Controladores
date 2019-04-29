@@ -75,7 +75,7 @@ public void setCodigo(int codigo) {
     }
      @Override
     public String toString() {
-        return "Animal{" + "codigo=" + codigo + ", nombre=" + nombre + ", edad=" + edad + ", peso=" + peso +'}';
+        return "Animal\n{" + "codigo=" + codigo + ", nombre=" + nombre + ", edad=" + edad + ", peso=" + peso +'}';
     }
 
     @Override

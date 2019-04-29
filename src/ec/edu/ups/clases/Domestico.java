@@ -87,7 +87,7 @@ public abstract class Domestico extends Animal implements Acciones {
 
     @Override
     public String toString() {
-        return "Domestico{" + "tama\u00f1o=" + tamaño + ", numExtremindades=" + numExtremindades + ", sexo=" + sexo + ", alimento=" + alimento + '}';
+        return super.toString()+"\nDomestico\n{" + "tama\u00f1o=" + tamaño + ", numExtremindades=" + numExtremindades + ", sexo=" + sexo + ", alimento=" + alimento + '}';
     }
    @Override
     public boolean nacer() {
